@@ -10,11 +10,16 @@ const product2 = {
 };
 
 function updatePriceWithDiscount(product, discount) {
-  // Din kod här
+  return {
+    ...product,
+    price: ((100 - discount) / 100) * product.price,
+  };
 }
 
 // console.log(updatePriceWithDiscount(product2, 10));
 // Output: { name: "Laptop", price: 13500, brand: "TechBrand" }
 // Uträkning: ((100 - discount)/100) * price = rabbaterat pris
+
+// console.log(updatePriceWithDiscount(product2, 10));
 
 module.exports = updatePriceWithDiscount;
