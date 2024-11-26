@@ -9,7 +9,17 @@
 // filterNames(["John", "Mary", "Peter", "Jane"], "X") // Returnerar []
 
 function filterNames(names, letter) {
-  // Din kod här
+  let result = [];
+  names.forEach((name) => {
+    if (name[0] == letter) {
+      result.push(name);
+    }
+  });
+  return result;
 }
+
+// console.log(filterNames(["John", "Mary", "Peter", "Jane"], "J"));
+// console.log(filterNames(["John", "Mary", "Peter", "Jane"], "P"));
+// console.log(filterNames(["John", "Mary", "Peter", "Jane"], "X"));
 
 module.exports = filterNames;
